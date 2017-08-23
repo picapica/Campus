@@ -1,15 +1,9 @@
-class AppDelegate
-  def application(application, didFinishLaunchingWithOptions:launchOptions)
-    rootViewController = UIViewController.alloc.init
-    rootViewController.title = 'campus'
-    rootViewController.view.backgroundColor = UIColor.whiteColor
+class AppDelegate < PM::Delegate
+  status_bar true, animation: :none
 
-    navigationController = UINavigationController.alloc.initWithRootViewController(rootViewController)
-
-    @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
-    @window.rootViewController = navigationController
-    @window.makeKeyAndVisible
-
-    true
+  def on_load(app, options)
+    return true if RUBYMOTION_ENV == "test"
+    open HomeScreen.new(nav_bar: true)
   end
+
 end
