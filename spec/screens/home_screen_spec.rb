@@ -1,28 +1,11 @@
-describe HomeScreen do
+describe "HomeScreen" do
   tests HomeScreen
 
-  def home_screen
-    @home_screen ||= HomeScreen.new(nav_bar: true)
+  before do
+    @controller = HomeScreen.new
   end
 
-  def controller
-    home_screen.navigationController
+  it "should include the text label we added" do
+    view('Hello World').should.not.be.nil
   end
-
-  after { @home_screen = nil }
-
-  it "has a navigationController" do
-    home_screen.navigationController.should.be.kind_of(UINavigationController)
-  end
-
-  it "has a right nav bar button" do
-    home_screen.navigationItem.rightBarButtonItem.should.be.kind_of(UIBarButtonItem)
-  end
-
-  it "opens the help screen when tapping Help" do
-    tap("Help")
-    controller.topViewController.should.be.kind_of(HelpScreen)
-  end
-
 end
-

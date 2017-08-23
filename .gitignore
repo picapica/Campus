@@ -5,6 +5,8 @@ app/pixate_code.rb
 resources/*.nib
 resources/*.momd
 resources/*.storyboardc
+resources/*.xcdatamodeld
+vendor/Pods
 .DS_Store
 nbproject
 .redcar
@@ -15,4 +17,5 @@ nbproject
 .sass-cache
 .idea
 .dat*.*
-.bundle
+*.swp
+*.orig

@@ -1,31 +1,24 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-gem 'rake'
+gem "rake"
+gem "motion-cocoapods"
+gem "redpotion"
+gem "cdq" # Core Data
+gem "motion-yaml", "1.4" # Version 1.5 breaks CDQ
+gem "afmotion" # Networking
 
-# ProMotion
-gem 'ProMotion', '~> 2.0'
-# gem 'ProMotion-menu', '~> 1.0' # PM::Menu
-# gem 'ProMotion-form', '~> 0.3' # PM::FormScreen
-# gem 'ProMotion-push', '~> 0.3' # Push Notifications
-# gem 'ProMotion-map', '~> 0.5'  # PM::MapScreen
+# Debugging tools
+gem "newclear" # Completely wipe out the simulator and rebuild
 
-# Awesome gem that adds a ton of helpers.
-# gem 'sugarcube', require: [ 'sugarcube-common' ]
+# Optional
 
-# Layout and styling gem
-# gem 'motion-kit', '~> 0.17'
+# gem "ProMotion-XLForm"
+# gem "ProMotion-push", "~> 0.2" # Push Notifications
+# gem "ProMotion-map", "~> 0.3"  # PM::MapScreen
+# gem "ProMotion-iap" # PM In-app purchases
+# gem "ProMotion-menu" # PM Side menu
 
-# Front end toolkit
-# gem 'ruby_motion_query', '~> 1.1'
-
-# CoreData
-# gem 'cdq', '~> 0.1'
-
-# Networking
-# gem 'afmotion', '~> 2.5'
-
-# Screenshot acceptance comparison tool
-# gem 'motion-juxtapose', '~> 0.2'
-
-# Awesome Print
-# gem 'awesome_print_motion', '~> 0.1'
+# gem "motion-mastr" # Attributed strings: https://github.com/skellock/motion-mastr
+# gem 'motion-blitz' # Easy HUD with SVProgressHUD
+# gem "motion-juxtapose", "~> 0.1" # Screenshot acceptance comparison tool
+# gem "bubble-wrap"
